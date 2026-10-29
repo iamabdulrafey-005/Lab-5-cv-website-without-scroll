@@ -1132,3 +1132,247 @@ body::before {
   font-size: 12.5px;
   color: var(--text-muted);
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   DYNAMIC WATERMARK & LIVE BACKGROUND CANVAS LAYER
+   ══════════════════════════════════════════════════════════════════ */
+.parallax-watermark-wrap {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-watermark {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.watermark-text {
+  font-size: clamp(5rem, 14vw, 13rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(245, 158, 11, 0.08);
+  text-transform: uppercase;
+  user-select: none;
+  display: inline-block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, -webkit-text-stroke 0.4s ease;
+}
+
+.watermark-text.is-morphing {
+  opacity: 0.1;
+  transform: scale(0.95);
+}
+
+.watermark-text.is-pulsing {
+  animation: watermark-pulse 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes watermark-pulse {
+  0% {
+    transform: scale(1);
+    -webkit-text-stroke: 1.5px rgba(245, 158, 11, 0.1);
+  }
+  35% {
+    transform: scale(1.06);
+    -webkit-text-stroke: 2.5px rgba(244, 63, 94, 0.4);
+    filter: drop-shadow(0 0 36px rgba(245, 158, 11, 0.3));
+  }
+  100% {
+    transform: scale(1);
+    -webkit-text-stroke: 1.5px rgba(245, 158, 11, 0.08);
+  }
+}
+
+.live-bg-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.85;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   10-SECOND REACTIVE COLOR OVERDRIVE THEMES (FRONTEND & BACKEND)
+   ══════════════════════════════════════════════════════════════════ */
+body {
+  --overdrive-glow-1: rgba(245, 158, 11, 0.15);
+  --overdrive-glow-2: rgba(244, 63, 94, 0.12);
+  --overdrive-border: rgba(245, 158, 11, 0.5);
+  transition: background-color 0.5s ease;
+}
+
+/* Overdrive: About (Warm Cyber Gold & Amber) */
+body[data-overdrive="about"] {
+  --accent-gold: #F59E0B;
+  --accent-rose: #FB923C;
+  --overdrive-glow-1: rgba(245, 158, 11, 0.38);
+  --overdrive-glow-2: rgba(251, 146, 60, 0.3);
+  --overdrive-border: rgba(245, 158, 11, 0.7);
+}
+
+/* Overdrive: Skills (Cyber Gold & Cyan Matrix) */
+body[data-overdrive="skills"] {
+  --accent-gold: #FBBF24;
+  --accent-rose: #38BDF8;
+  --accent-violet: #0EA5E9;
+  --overdrive-glow-1: rgba(251, 191, 36, 0.38);
+  --overdrive-glow-2: rgba(56, 189, 248, 0.32);
+  --overdrive-border: rgba(56, 189, 248, 0.7);
+}
+
+/* Overdrive: Experience (Neon Rose & Crimson Flare) */
+body[data-overdrive="experience"] {
+  --accent-gold: #F43F5E;
+  --accent-rose: #E11D48;
+  --accent-violet: #FB7185;
+  --overdrive-glow-1: rgba(244, 63, 94, 0.4);
+  --overdrive-glow-2: rgba(225, 29, 72, 0.32);
+  --overdrive-border: rgba(244, 63, 94, 0.75);
+}
+
+/* Overdrive: Certificates (Verified Emerald & Shield Gold) */
+body[data-overdrive="certs"] {
+  --accent-gold: #10B981;
+  --accent-rose: #F59E0B;
+  --accent-violet: #34D399;
+  --overdrive-glow-1: rgba(16, 185, 129, 0.4);
+  --overdrive-glow-2: rgba(245, 158, 11, 0.32);
+  --overdrive-border: rgba(16, 185, 129, 0.75);
+}
+
+/* Overdrive: Education (Blue Matrix & Quantum Violet) */
+body[data-overdrive="education"] {
+  --accent-gold: #3B82F6;
+  --accent-rose: #8B5CF6;
+  --accent-violet: #6366F1;
+  --overdrive-glow-1: rgba(59, 130, 246, 0.38);
+  --overdrive-glow-2: rgba(139, 92, 246, 0.32);
+  --overdrive-border: rgba(59, 130, 246, 0.75);
+}
+
+/* Overdrive: Contact (Prismatic Electric Warp) */
+body[data-overdrive="contact"] {
+  --accent-gold: #EC4899;
+  --accent-rose: #F43F5E;
+  --accent-violet: #F59E0B;
+  --overdrive-glow-1: rgba(236, 72, 153, 0.42);
+  --overdrive-glow-2: rgba(245, 158, 11, 0.32);
+  --overdrive-border: rgba(236, 72, 153, 0.75);
+}
+
+/* Overdrive Aura Background */
+.overdrive-aura {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background-image:
+    radial-gradient(circle at 20% 30%, var(--overdrive-glow-1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, var(--overdrive-glow-2) 0%, transparent 50%);
+}
+
+body.is-overdrive .overdrive-aura {
+  opacity: 1;
+}
+
+body.is-overdrive .watermark-text {
+  -webkit-text-stroke-color: var(--overdrive-border);
+  filter: drop-shadow(0 0 24px var(--overdrive-border));
+}
+
+/* Focused Card 10s Elevation & Glowing Beam */
+.card.is-highlighted,
+.card.section-overdrive-focus {
+  border-color: var(--overdrive-border, var(--accent-gold)) !important;
+  box-shadow: 0 0 32px var(--overdrive-glow-1, rgba(245, 158, 11, 0.45)), inset 0 0 16px var(--overdrive-glow-2, rgba(244, 63, 94, 0.2)) !important;
+  transform: translateY(-2px) scale(1.01) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: cardFocusGlow 1.6s ease-in-out infinite alternate !important;
+}
+
+@keyframes cardFocusGlow {
+  0% {
+    box-shadow: 0 0 20px var(--overdrive-glow-1, rgba(245, 158, 11, 0.35));
+  }
+  100% {
+    box-shadow: 0 0 42px var(--overdrive-glow-1, rgba(245, 158, 11, 0.5)), 0 0 14px var(--overdrive-border, var(--accent-gold));
+  }
+}
+
+/* Active Nav Tab Glow during Overdrive */
+.nav-tab.is-active {
+  border-color: var(--overdrive-border, var(--accent-gold)) !important;
+  box-shadow: 0 3px 14px var(--overdrive-glow-1, rgba(245, 158, 11, 0.35)) !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   MOUSE DRAG CHROMATIC INTERACTION
+   ══════════════════════════════════════════════════════════════════ */
+body.is-mouse-dragging {
+  user-select: none;
+  cursor: grab;
+}
+
+body.is-mouse-dragging * {
+  cursor: grabbing !important;
+}
+
+.mouse-drag-spotlight {
+  position: fixed;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, hsla(var(--drag-hue, 45), 95%, 60%, 0.18) 0%, transparent 68%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  mix-blend-mode: screen;
+}
+
+body.is-mouse-dragging .mouse-drag-spotlight {
+  opacity: 1;
+}
+
+body.is-mouse-dragging .card {
+  border-color: hsla(var(--drag-hue, 45), 90%, 65%, 0.45) !important;
+  box-shadow: 0 10px 30px hsla(var(--drag-hue, 45), 90%, 55%, 0.16) !important;
+}
+
+/* HUD 10s Countdown Badge */
+.hud-countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 1.5px 6px;
+  border-radius: 4px;
+  background: rgba(245, 158, 11, 0.16);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: var(--accent-gold);
+  margin-left: 6px;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.25s ease;
+}
+
+.hud-countdown.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+

@@ -10,6 +10,16 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Dynamic Background Shaders & Watermark Animation Layers -->
+  <div class="parallax-watermark-wrap" aria-hidden="true">
+    <div class="parallax-watermark">
+      <span class="watermark-text" id="watermarkText">ABDUL RAFAY</span>
+    </div>
+  </div>
+  <canvas id="sectionLiveCanvas" class="live-bg-canvas" aria-hidden="true"></canvas>
+  <div class="overdrive-aura" id="overdriveAura" aria-hidden="true"></div>
+  <div class="mouse-drag-spotlight" id="mouseDragSpotlight" aria-hidden="true"></div>
+
   <div class="app-viewport">
     
     <!-- ═══════════════════════════════════════════════════════════════ -->
@@ -348,6 +358,7 @@
       <div class="hud-status">
         <span class="hud-indicator" id="hudIndicator"></span>
         <span class="hud-title">SYSTEM MONITOR :: RUNTIME</span>
+        <span class="hud-countdown" id="hudCountdown">10s OVERDRIVE</span>
       </div>
       <span class="hud-latency" id="hudLatency">ONLINE</span>
     </div>
