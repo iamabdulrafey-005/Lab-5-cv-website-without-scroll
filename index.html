@@ -6,7 +6,7 @@
   <title>Abdul Rafay — Executive CV & Developer Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -24,26 +24,30 @@
 
       <!-- Center Executive Navigation Bar -->
       <nav class="center-nav" aria-label="Main sections">
-        <a href="#about" class="nav-tab is-active" onclick="selectTab(this, 'about')">
+        <button type="button" class="nav-tab is-active" data-target="about">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           <span>About</span>
-        </a>
-        <a href="#skills" class="nav-tab" onclick="selectTab(this, 'skills')">
+        </button>
+        <button type="button" class="nav-tab" data-target="skills">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <span>Skills</span>
-        </a>
-        <a href="#experience" class="nav-tab" onclick="selectTab(this, 'experience')">
+        </button>
+        <button type="button" class="nav-tab" data-target="experience">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
           <span>Experience</span>
-        </a>
-        <a href="#education" class="nav-tab" onclick="selectTab(this, 'education')">
+        </button>
+        <button type="button" class="nav-tab" data-target="certs">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          <span>Certificates</span>
+        </button>
+        <button type="button" class="nav-tab" data-target="education">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
           <span>Education</span>
-        </a>
-        <a href="#contact" class="nav-tab" onclick="selectTab(this, 'contact')">
+        </button>
+        <button type="button" class="nav-tab" data-target="contact">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           <span>Contact</span>
-        </a>
+        </button>
       </nav>
 
       <div class="header-actions">
@@ -53,15 +57,15 @@
         </div>
 
         <nav class="quick-contacts" aria-label="Quick links">
-          <a class="quick-link" href="https://www.linkedin.com/in/abdul-rafay2005" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+          <a class="quick-link has-ripple" href="https://www.linkedin.com/in/abdul-rafay2005" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             <span>LinkedIn</span>
           </a>
-          <a class="quick-link" href="mailto:abdulrafey5931@gmail.com" title="Email">
+          <a class="quick-link has-ripple" href="mailto:abdulrafey5931@gmail.com" title="Email">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <span>Email</span>
           </a>
-          <a class="quick-link" href="tel:+923184504766" title="Phone">
+          <a class="quick-link has-ripple" href="tel:+923184504766" title="Phone">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <span>Call</span>
           </a>
@@ -101,7 +105,7 @@
             </div>
           </div>
           <p class="profile-bio">
-            Motivated software developer with hands-on experience in C, C++, Java (OOP), and HTML/CSS, backed by solid foundations in Data Structures and Algorithms (DSA). Experienced in building responsive web layouts, managing Shopify storefronts, and executing digital campaigns.
+            Motivated software developer with hands-on experience in C, C++, Java (OOP), and HTML/CSS, backed by solid foundations in Data Structures and Algorithms (DSA), MongoDB concurrency, and responsive interface design.
           </p>
         </article>
 
@@ -112,15 +116,15 @@
             <span>Direct Channels &amp; Presence</span>
           </div>
           <div class="contact-grid">
-            <a class="contact-row" href="tel:+923184504766" title="Phone">
+            <a class="contact-row has-ripple" href="tel:+923184504766" title="Phone">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <span>+92 318 4504766</span>
             </a>
-            <a class="contact-row" href="mailto:abdulrafey5931@gmail.com" title="Email">
+            <a class="contact-row has-ripple" href="mailto:abdulrafey5931@gmail.com" title="Email">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               <span>abdulrafey5931@gmail.com</span>
             </a>
-            <a class="contact-row" href="https://www.linkedin.com/in/abdul-rafay2005" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <a class="contact-row has-ripple" href="https://www.linkedin.com/in/abdul-rafay2005" target="_blank" rel="noopener noreferrer" title="LinkedIn">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
               <span>in/abdul-rafay2005</span>
             </a>
@@ -142,11 +146,11 @@
           <div class="skills-block">
             <span class="skills-group-title">Programming &amp; Core CS</span>
             <div class="pill-wrap">
-              <span class="pill pill--gold">C</span>
-              <span class="pill pill--gold">C++</span>
-              <span class="pill pill--gold">Java (OOP)</span>
-              <span class="pill pill--gold">Data Structures &amp; Algorithms</span>
-              <span class="pill pill--gold">Problem-Solving</span>
+              <span class="pill pill--gold has-ripple">C</span>
+              <span class="pill pill--gold has-ripple">C++</span>
+              <span class="pill pill--gold has-ripple">Java (OOP)</span>
+              <span class="pill pill--gold has-ripple">Data Structures &amp; Algorithms</span>
+              <span class="pill pill--gold has-ripple">Problem-Solving</span>
             </div>
           </div>
 
@@ -154,30 +158,29 @@
           <div class="skills-block">
             <span class="skills-group-title">Web &amp; Frontend Architecture</span>
             <div class="pill-wrap">
-              <span class="pill pill--rose">HTML5</span>
-              <span class="pill pill--rose">CSS3</span>
-              <span class="pill pill--rose">JavaScript (ES6+)</span>
-              <span class="pill pill--rose">Responsive Web Layouts</span>
-              <span class="pill pill--rose">UI/UX Design</span>
+              <span class="pill pill--rose has-ripple">HTML5</span>
+              <span class="pill pill--rose has-ripple">CSS3</span>
+              <span class="pill pill--rose has-ripple">JavaScript (ES6+)</span>
+              <span class="pill pill--rose has-ripple">Responsive Web Layouts</span>
+              <span class="pill pill--rose has-ripple">UI/UX Design</span>
             </div>
           </div>
 
           <!-- Group 3 -->
           <div class="skills-block">
-            <span class="skills-group-title">E-Commerce &amp; Digital Growth</span>
+            <span class="skills-group-title">Backend &amp; E-Commerce</span>
             <div class="pill-wrap">
-              <span class="pill pill--violet">Shopify Store Setup &amp; Mgmt</span>
-              <span class="pill pill--violet">Theme Customization</span>
-              <span class="pill pill--violet">Inventory &amp; Pricing</span>
-              <span class="pill pill--violet">Product Listing</span>
-              <span class="pill pill--violet">Basic SEO</span>
-              <span class="pill pill--violet">Social Media Marketing</span>
+              <span class="pill pill--violet has-ripple">Node.js</span>
+              <span class="pill pill--violet has-ripple">MongoDB</span>
+              <span class="pill pill--violet has-ripple">Concurrency Control</span>
+              <span class="pill pill--violet has-ripple">Shopify Store Setup</span>
+              <span class="pill pill--violet has-ripple">SEO &amp; Campaigns</span>
             </div>
           </div>
         </article>
       </aside>
 
-      <!-- ── RIGHT COLUMN: Experience, Achievements, Education ── -->
+      <!-- ── RIGHT COLUMN: Experience, Achievements, Certificates, Education ── -->
       <section class="col-right">
         
         <!-- Experience & Projects -->
@@ -189,7 +192,7 @@
 
           <div class="exp-items">
             <!-- Entry 1: Shopify Expert -->
-            <div class="exp-row exp-row--gold">
+            <div class="exp-row exp-row--gold has-ripple">
               <div class="exp-row-head">
                 <div class="exp-role-title">
                   <span class="role-name">Shopify Expert</span>
@@ -205,7 +208,7 @@
             </div>
 
             <!-- Entry 2: Coding & Development Projects -->
-            <div class="exp-row exp-row--rose">
+            <div class="exp-row exp-row--rose has-ripple">
               <div class="exp-row-head">
                 <div class="exp-role-title">
                   <span class="role-name">Coding &amp; Development Projects</span>
@@ -222,12 +225,46 @@
           </div>
 
           <!-- Highlight Achievement Strip -->
-          <div class="achievements-banner">
+          <div class="achievements-banner has-ripple">
             <div class="achieve-icon" aria-hidden="true">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
             </div>
             <div class="achieve-text">
               <strong>Key Achievements:</strong> Boosted social media campaign engagement by <strong>40%</strong> through targeted creative content &bull; Successfully coordinated academic group deliverables and assisted peers in programming assignments.
+            </div>
+          </div>
+        </article>
+
+        <!-- Dynamic Certificates Strip (Interactive Lightbox Trigger) -->
+        <article class="card certs-strip-card" id="certs">
+          <div class="card-head">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            <span>Verified Google &bull; Coursera Certificates (Click to Enlarge)</span>
+          </div>
+
+          <div class="certs-mini-grid">
+            <div class="cert-thumb-box has-ripple" data-full="./certs/cert1.png" data-title="Introduction to AI" data-issuer="Google &bull; Offered through Coursera">
+              <img src="./certs/cert1.png" alt="Introduction to AI Certificate" class="cert-thumb-img" />
+              <div class="cert-thumb-info">
+                <span class="cert-thumb-tag">Google Authorized</span>
+                <span class="cert-thumb-title">Introduction to AI</span>
+              </div>
+            </div>
+
+            <div class="cert-thumb-box has-ripple" data-full="./certs/cert2.png" data-title="Maximize Productivity With AI Tools" data-issuer="Google &bull; Offered through Coursera">
+              <img src="./certs/cert2.png" alt="Maximize Productivity Certificate" class="cert-thumb-img" />
+              <div class="cert-thumb-info">
+                <span class="cert-thumb-tag">Google Authorized</span>
+                <span class="cert-thumb-title">AI Productivity Tools</span>
+              </div>
+            </div>
+
+            <div class="cert-thumb-box has-ripple" data-full="./certs/cert3.png" data-title="Foundations of Cybersecurity" data-issuer="Google &bull; Offered through Coursera">
+              <img src="./certs/cert3.png" alt="Foundations of Cybersecurity Certificate" class="cert-thumb-img" />
+              <div class="cert-thumb-info">
+                <span class="cert-thumb-tag">Google Authorized</span>
+                <span class="cert-thumb-title">Cybersecurity Foundations</span>
+              </div>
             </div>
           </div>
         </article>
@@ -241,7 +278,7 @@
 
           <div class="education-grid">
             <!-- Degree 1 -->
-            <div class="edu-box edu-box--active">
+            <div class="edu-box edu-box--active has-ripple">
               <div class="edu-top">
                 <h3 class="edu-degree">BS in Computer Science</h3>
                 <p class="edu-institute">Qarshi University</p>
@@ -253,7 +290,7 @@
             </div>
 
             <!-- Degree 2 -->
-            <div class="edu-box">
+            <div class="edu-box has-ripple">
               <div class="edu-top">
                 <h3 class="edu-degree">Intermediate in CS</h3>
                 <p class="edu-institute">Punjab College</p>
@@ -265,7 +302,7 @@
             </div>
 
             <!-- Degree 3 -->
-            <div class="edu-box">
+            <div class="edu-box has-ripple">
               <div class="edu-top">
                 <h3 class="edu-degree">Matriculation</h3>
                 <p class="edu-institute">Hajveri Lyceum School</p>
@@ -289,12 +326,12 @@
         <span>Abdul Rafay &bull; Single-View Executive CV &bull; Web &amp; Software Roles</span>
       </div>
       <div class="footer-right">
-        <a href="https://www.linkedin.com/in/abdul-rafay2005" target="_blank" rel="noopener noreferrer">
+        <a class="has-ripple" href="https://www.linkedin.com/in/abdul-rafay2005" target="_blank" rel="noopener noreferrer">
           <span>linkedin.com/in/abdul-rafay2005</span>
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
         </a>
         <span class="footer-sep">&bull;</span>
-        <a href="mailto:abdulrafey5931@gmail.com">
+        <a class="has-ripple" href="mailto:abdulrafey5931@gmail.com">
           <span>abdulrafey5931@gmail.com</span>
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
         </a>
@@ -303,18 +340,39 @@
 
   </div>
 
-  <script>
-    function selectTab(el, targetId) {
-      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('is-active'));
-      el.classList.add('is-active');
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!--  LIVE BACKEND TELEMETRY HUD / SYSTEM TERMINAL                  -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <aside class="telemetry-hud" id="telemetryHud" aria-live="polite">
+    <div class="hud-header">
+      <div class="hud-status">
+        <span class="hud-indicator" id="hudIndicator"></span>
+        <span class="hud-title">SYSTEM MONITOR :: RUNTIME</span>
+      </div>
+      <span class="hud-latency" id="hudLatency">ONLINE</span>
+    </div>
+    <div class="hud-terminal" id="hudTerminal">
+      <div class="hud-line hud-line--init">[SYS-INIT] Telemetry loop active &bull; Concurrency engine ready</div>
+    </div>
+  </aside>
 
-      const card = document.getElementById(targetId);
-      if (card) {
-        document.querySelectorAll('.card').forEach(c => c.classList.remove('is-highlighted'));
-        card.classList.add('is-highlighted');
-        setTimeout(() => card.classList.remove('is-highlighted'), 1600);
-      }
-    }
-  </script>
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!--  CERTIFICATE LIGHTBOX MODAL                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-dialog">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close fullscreen view">&times;</button>
+      <div class="lightbox-body">
+        <img src="" alt="Fullscreen Certificate" class="lightbox-img" id="lightboxImg" />
+        <div class="lightbox-caption">
+          <h4 id="lightboxTitle"></h4>
+          <p id="lightboxIssuer"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
