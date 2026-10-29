@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdul Rafay — Executive CV & Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-viewport">
+    
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!--  TOP EXECUTIVE STATUS & BRAND HEADER                           -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <header class="top-header">
+      <div class="brand-group">
+        <span class="top-name">ABDUL RAFAY</span>
+        <span class="top-separator">/</span>
+        <span class="top-role-tag">FULL-STACK DEVELOPER</span>
+      </div>
+
+      <!-- Center Executive Navigation Bar -->
+      <nav class="center-nav" aria-label="Main sections">
+        <a href="#about" class="nav-tab is-active" onclick="selectTab(this, 'about')">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>About</span>
+        </a>
+        <a href="#skills" class="nav-tab" onclick="selectTab(this, 'skills')">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>Skills</span>
+        </a>
+        <a href="#experience" class="nav-tab" onclick="selectTab(this, 'experience')">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <span>Experience</span>
+        </a>
+        <a href="#education" class="nav-tab" onclick="selectTab(this, 'education')">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <span>Education</span>
+        </a>
+        <a href="#contact" class="nav-tab" onclick="selectTab(this, 'contact')">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Contact</span>
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="availability-pill">
+          <span class="status-dot"></span>
+          <span>Available</span>
+        </div>
+
+        <nav class="quick-contacts" aria-label="Quick links">
+          <a class="quick-link" href="https://www.linkedin.com/in/abdul-rafay2005" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a class="quick-link" href="mailto:abdulrafey5931@gmail.com" title="Email">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>Email</span>
+          </a>
+          <a class="quick-link" href="tel:+923184504766" title="Phone">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Call</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!--  BALANCED VIEWPORT DUAL-COLUMN GRID                            -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <main class="main-grid">
+      
+      <!-- ── LEFT COLUMN: Profile Hero, Contacts, Categorized Skills ── -->
+      <aside class="col-left">
+        
+        <!-- Profile Identity Card with Actual Headshot -->
+        <article class="card profile-card" id="about">
+          <div class="profile-top-row">
+            <div class="avatar-ring">
+              <div class="avatar-wrapper">
+                <img
+                  src="./profile.jpg"
+                  alt="Abdul Rafay - Software Developer & CS Student"
+                  class="avatar-img"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="avatar-fallback" aria-hidden="true">AR</div>
+              </div>
+            </div>
+            <div class="hero-meta">
+              <h1 class="hero-name">ABDUL <span class="hero-name--accent">RAFAY</span></h1>
+              <p class="hero-subtitle">5th Sem BSCS &bull; Full-Stack Dev</p>
+              <div class="mini-status-chip">
+                <span class="status-dot"></span>
+                <span>Open for Tech &amp; Web Roles</span>
+              </div>
+            </div>
+          </div>
+          <p class="profile-bio">
+            Motivated software developer with hands-on experience in C, C++, Java (OOP), and HTML/CSS, backed by solid foundations in Data Structures and Algorithms (DSA). Experienced in building responsive web layouts, managing Shopify storefronts, and executing digital campaigns.
+          </p>
+        </article>
+
+        <!-- Compact Contact & Channels Card -->
+        <article class="card contact-card" id="contact">
+          <div class="card-head">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Direct Channels &amp; Presence</span>
+          </div>
+          <div class="contact-grid">
+            <a class="contact-row" href="tel:+923184504766" title="Phone">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+92 318 4504766</span>
+            </a>
+            <a class="contact-row" href="mailto:abdulrafey5931@gmail.com" title="Email">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>abdulrafey5931@gmail.com</span>
+            </a>
+            <a class="contact-row" href="https://www.linkedin.com/in/abdul-rafay2005" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              <span>in/abdul-rafay2005</span>
+            </a>
+            <div class="contact-row contact-row--static" title="Location">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Samnabad, Lahore, PK</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Technical Skills Matrix -->
+        <article class="card skills-card" id="skills">
+          <div class="card-head">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>Technical Skills Matrix</span>
+          </div>
+
+          <!-- Group 1 -->
+          <div class="skills-block">
+            <span class="skills-group-title">Programming &amp; Core CS</span>
+            <div class="pill-wrap">
+              <span class="pill pill--gold">C</span>
+              <span class="pill pill--gold">C++</span>
+              <span class="pill pill--gold">Java (OOP)</span>
+              <span class="pill pill--gold">Data Structures &amp; Algorithms</span>
+              <span class="pill pill--gold">Problem-Solving</span>
+            </div>
+          </div>
+
+          <!-- Group 2 -->
+          <div class="skills-block">
+            <span class="skills-group-title">Web &amp; Frontend Architecture</span>
+            <div class="pill-wrap">
+              <span class="pill pill--rose">HTML5</span>
+              <span class="pill pill--rose">CSS3</span>
+              <span class="pill pill--rose">JavaScript (ES6+)</span>
+              <span class="pill pill--rose">Responsive Web Layouts</span>
+              <span class="pill pill--rose">UI/UX Design</span>
+            </div>
+          </div>
+
+          <!-- Group 3 -->
+          <div class="skills-block">
+            <span class="skills-group-title">E-Commerce &amp; Digital Growth</span>
+            <div class="pill-wrap">
+              <span class="pill pill--violet">Shopify Store Setup &amp; Mgmt</span>
+              <span class="pill pill--violet">Theme Customization</span>
+              <span class="pill pill--violet">Inventory &amp; Pricing</span>
+              <span class="pill pill--violet">Product Listing</span>
+              <span class="pill pill--violet">Basic SEO</span>
+              <span class="pill pill--violet">Social Media Marketing</span>
+            </div>
+          </div>
+        </article>
+      </aside>
+
+      <!-- ── RIGHT COLUMN: Experience, Achievements, Education ── -->
+      <section class="col-right">
+        
+        <!-- Experience & Projects -->
+        <article class="card experience-card" id="experience">
+          <div class="card-head">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <span>Working Experience &amp; Projects</span>
+          </div>
+
+          <div class="exp-items">
+            <!-- Entry 1: Shopify Expert -->
+            <div class="exp-row exp-row--gold">
+              <div class="exp-row-head">
+                <div class="exp-role-title">
+                  <span class="role-name">Shopify Expert</span>
+                  <span class="exp-badge exp-badge--gold">Commercial</span>
+                </div>
+                <span class="exp-period">2023 – Present</span>
+              </div>
+              <ul class="exp-bullets">
+                <li>Managed complete Shopify store setup, product listings, and custom theme layouts.</li>
+                <li>Handled pricing, product descriptions, and inventory optimization for seamless operations.</li>
+                <li>Implemented on-page SEO and digital promotion to enhance storefront visibility.</li>
+              </ul>
+            </div>
+
+            <!-- Entry 2: Coding & Development Projects -->
+            <div class="exp-row exp-row--rose">
+              <div class="exp-row-head">
+                <div class="exp-role-title">
+                  <span class="role-name">Coding &amp; Development Projects</span>
+                  <span class="exp-badge exp-badge--rose">Core Tech</span>
+                </div>
+                <span class="exp-period">2024 – 2025</span>
+              </div>
+              <ul class="exp-bullets">
+                <li>Engineered structured console and desktop applications in C, C++, and Java (Swing &amp; File I/O).</li>
+                <li>Designed responsive, visually appealing web layouts adhering to modern CSS standards.</li>
+                <li>Built algorithmic problem solutions with a strong focus on clean code and logic.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Highlight Achievement Strip -->
+          <div class="achievements-banner">
+            <div class="achieve-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div class="achieve-text">
+              <strong>Key Achievements:</strong> Boosted social media campaign engagement by <strong>40%</strong> through targeted creative content &bull; Successfully coordinated academic group deliverables and assisted peers in programming assignments.
+            </div>
+          </div>
+        </article>
+
+        <!-- Education Background -->
+        <article class="card education-card" id="education">
+          <div class="card-head">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <span>Academic Background</span>
+          </div>
+
+          <div class="education-grid">
+            <!-- Degree 1 -->
+            <div class="edu-box edu-box--active">
+              <div class="edu-top">
+                <h3 class="edu-degree">BS in Computer Science</h3>
+                <p class="edu-institute">Qarshi University</p>
+              </div>
+              <div class="edu-footer">
+                <span class="edu-years">2024 – 2028</span>
+                <span class="edu-status-tag">Currently 5th Semester</span>
+              </div>
+            </div>
+
+            <!-- Degree 2 -->
+            <div class="edu-box">
+              <div class="edu-top">
+                <h3 class="edu-degree">Intermediate in CS</h3>
+                <p class="edu-institute">Punjab College</p>
+              </div>
+              <div class="edu-footer">
+                <span class="edu-years">2022 – 2024</span>
+                <span class="edu-field-tag">ICS / Pre-Eng</span>
+              </div>
+            </div>
+
+            <!-- Degree 3 -->
+            <div class="edu-box">
+              <div class="edu-top">
+                <h3 class="edu-degree">Matriculation</h3>
+                <p class="edu-institute">Hajveri Lyceum School</p>
+              </div>
+              <div class="edu-footer">
+                <span class="edu-years">2009 – 2022</span>
+                <span class="edu-field-tag">Science Foundation</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </section>
+    </main>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!--  BOTTOM EXECUTIVE SYSTEM BAR                                   -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <footer class="bottom-bar">
+      <div class="footer-left">
+        <span>Abdul Rafay &bull; Single-View Executive CV &bull; Web &amp; Software Roles</span>
+      </div>
+      <div class="footer-right">
+        <a href="https://www.linkedin.com/in/abdul-rafay2005" target="_blank" rel="noopener noreferrer">
+          <span>linkedin.com/in/abdul-rafay2005</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+        <span class="footer-sep">&bull;</span>
+        <a href="mailto:abdulrafey5931@gmail.com">
+          <span>abdulrafey5931@gmail.com</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    function selectTab(el, targetId) {
+      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('is-active'));
+      el.classList.add('is-active');
+
+      const card = document.getElementById(targetId);
+      if (card) {
+        document.querySelectorAll('.card').forEach(c => c.classList.remove('is-highlighted'));
+        card.classList.add('is-highlighted');
+        setTimeout(() => card.classList.remove('is-highlighted'), 1600);
+      }
+    }
+  </script>
+</body>
+</html>
